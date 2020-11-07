@@ -69,7 +69,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'teachersJournal.wsgi.application'
 
 
-# Database
+# DatabasE
 
 DATABASES = {
     'default': {
@@ -77,7 +77,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'db',
+        'HOST': 'localhost',
         'PORT': 5432
     }
 }
