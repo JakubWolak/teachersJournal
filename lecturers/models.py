@@ -9,10 +9,10 @@ class Lecturer(Person, Timestamps):
     email = models.CharField(max_length=100, verbose_name="Email", null=False, blank=False)
 
 
-class Subject(models.Model, Timestamps):
+class Subject(Timestamps):
     """subject"""
-    lecturer = models.ForeignKey(Lecturer, on_delete=models.CASCADE, null=False, blank=False)
+    subject_lecturer = models.ForeignKey(Lecturer, on_delete=models.CASCADE, null=False, blank=False)
     name = models.CharField(max_length=75, verbose_name="Name", null=False, blank=False)
 
-    def __str__(self):
-        return self.name
+    def __str__(self) -> str:
+        return "{name}".format(name=self.name)
